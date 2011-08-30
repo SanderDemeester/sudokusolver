@@ -2,6 +2,9 @@ package modellen;
 
 public enum ModelEnum {
 	
-	FileModel, Null;
+	FileModel,
+	Solve,
+	credit,
+	Null;
 
 }
