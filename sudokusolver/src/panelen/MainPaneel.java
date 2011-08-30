@@ -14,7 +14,7 @@ public class MainPaneel extends JPanel{
 		super();
 		this.modelmanager = modelmanager;
 		setLayout(new BorderLayout());
-		add(new SidePanel(), BorderLayout.EAST);
+		add(new SidePanel(modelmanager), BorderLayout.EAST);
 	}
 
 }

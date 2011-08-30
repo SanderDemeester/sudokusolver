@@ -21,10 +21,9 @@ public class Main {
 		frame.setPreferredSize(new Dimension(800, 500));
 		frame.pack();
 		frame.setJMenuBar(new MenuBalk(modelmanager));
-		
-		
 	}
 	public static void main(String[] args){
+		
 		EventQueue.invokeLater(new Runnable() {
 			
 			@Override
