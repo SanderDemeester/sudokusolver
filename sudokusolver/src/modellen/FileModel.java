@@ -15,6 +15,7 @@ public class FileModel extends Model{
 	
 	public void addFile(File sudokufile){
 		this.sudokufile = sudokufile;
+		firestateChaned();
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {

@@ -29,13 +29,19 @@ public class SidePanel extends JPanel{
 		
 		solveknop = new JButton("Solve");
 		resetknop = new JButton("Reset");
+		solveknop.setActionCommand("solve");
+		resetknop.setActionCommand("rest");
 		
 		resetknop.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				modelmanager.getModel(modelmanager.getMapModel().get("reset")).actionPerformed(e);
+				eventmanager.parseEvent(
+						eventmanager.getEventNameMapping().get(e.getActionCommand())).performEvent(
+								modelmanager,e.getActionCommand()
+								);
+				//modelmanager.getModel(modelmanager.getMapModel().get("reset")).actionPerformed(e);
 				
 			}
 		});
@@ -45,7 +51,11 @@ public class SidePanel extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				modelmanager.getModel(modelmanager.getMapModel().get("solve")).actionPerformed(e);
+				//modelmanager.getModel(modelmanager.getMapModel().get("solve")).actionPerformed(e);
+				eventmanager.parseEvent(
+						eventmanager.getEventNameMapping().get(e.getActionCommand())).performEvent(
+								modelmanager,e.getActionCommand()
+								);
 			}
 		});
 		add(solveknop);

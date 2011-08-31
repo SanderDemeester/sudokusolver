@@ -4,6 +4,7 @@ public enum EventEnum {
 	
 	openfile,
 	reset,
-	Null;
+	solve,
+	dummy;
 
 }

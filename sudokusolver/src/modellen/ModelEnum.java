@@ -3,9 +3,9 @@ package modellen;
 public enum ModelEnum {
 	
 	openfile,
-	Solve,
+	solve,
 	credit,
-	Reset,
-	Null;
+	reset,
+	dummy;
 
 }

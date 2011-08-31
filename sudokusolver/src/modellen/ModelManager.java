@@ -10,14 +10,14 @@ public class ModelManager {
 	private HashMap<String,ModelEnum> mapmodel = new HashMap<String,ModelEnum>();
 	
 	public ModelManager(){
-		lijstmodellen.put(ModelEnum.Null, new DummyModel());
+		lijstmodellen.put(ModelEnum.dummy, new DummyModel());
 		lijstmodellen.put(ModelEnum.openfile, new FileModel());
 		
 		
 		mapmodel.put("openfile", ModelEnum.openfile); //model geimplementeerdt
-		mapmodel.put("solve", ModelEnum.Null); //model nog niet geimplementeerdt
-		mapmodel.put("credit", ModelEnum.Null); //model nog niet geiplementeert
-		mapmodel.put("reset", ModelEnum.Null); //model nog niet geimplementeert
+		mapmodel.put("solve", ModelEnum.dummy); //model nog niet geimplementeerdt
+		mapmodel.put("credit", ModelEnum.dummy); //model nog niet geiplementeert
+		mapmodel.put("reset", ModelEnum.dummy); //model nog niet geimplementeert
 		
 	}
 	

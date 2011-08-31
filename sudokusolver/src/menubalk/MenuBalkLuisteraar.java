@@ -22,10 +22,9 @@ public class MenuBalkLuisteraar implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		//delegeer model events adhv ModelEnum
-		System.out.println(e.getActionCommand());
 		eventmanager.parseEvent(
 				eventmanager.getEventNameMapping().get(e.getActionCommand())).performEvent(
-						modelmanager
+						modelmanager,e.getActionCommand()
 						);
 		
 	}
