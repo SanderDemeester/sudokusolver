@@ -4,6 +4,7 @@ import handlers.DummyHandler;
 import handlers.LoadFile;
 import handlers.Reset;
 import handlers.Solve;
+import handlers.StapSolve;
 
 import java.util.HashMap;
 
@@ -22,12 +23,14 @@ public class EventManager {
 		eventmap.put(EventEnum.openfile, new LoadFile());
 		eventmap.put(EventEnum.solve, new Solve());
 		eventmap.put(EventEnum.reset, new Reset());
+		eventmap.put(EventEnum.stap, new StapSolve());
 		eventmap.put(EventEnum.dummy,new DummyHandler());
 		
 		eventNameMapping.put("openfile", EventEnum.openfile);
 		eventNameMapping.put("dummy", EventEnum.dummy);
 		eventNameMapping.put("reset", EventEnum.reset);
 		eventNameMapping.put("solve", EventEnum.solve);
+		eventNameMapping.put("stap", EventEnum.stap);
 	}
 	
 	public EventHandler parseEvent(EventEnum eventenum){

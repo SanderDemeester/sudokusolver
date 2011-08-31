@@ -18,9 +18,10 @@ public class MainPaneel extends JPanel implements ChangeListener{
 	private JLabel label;
 	
 	public MainPaneel(ModelManager modelmanager,
-						EventManager eventmanger){
+						EventManager eventmanager){
 		super();
 		this.modelmanager = modelmanager;
+		this.eventmanager = eventmanager;
 		modelmanager.getModel(modelmanager.getMapModel().get("openfile")).addChangeListerner(this);
 		setLayout(new BorderLayout());
 		add(new SidePanel(modelmanager,eventmanager), BorderLayout.EAST);

@@ -13,29 +13,29 @@ import eventHandlers.EventManager;
 
 public class SidePanel extends JPanel{
 	
-	private ModelManager modelmanager;
-	private EventManager eventmanger;
 	
 	private JButton solveknop;
 	private JButton resetknop;
+	private JButton stapknop;
 	
 	public SidePanel(final ModelManager modelmanager,
 					 final EventManager eventmanager){
 		super();
 		
-		this.modelmanager = modelmanager;
 		setBackground(Color.red);
 		setPreferredSize(new Dimension(200, 800));
 		
 		solveknop = new JButton("Solve");
 		resetknop = new JButton("Reset");
+		stapknop = new JButton("Stap");
 		solveknop.setActionCommand("solve");
-		resetknop.setActionCommand("rest");
+		resetknop.setActionCommand("reset");
+		stapknop.setActionCommand("stap");
 		
 		resetknop.addActionListener(new ActionListener() {
 			
 			@Override
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e){
 				// TODO Auto-generated method stub
 				eventmanager.parseEvent(
 						eventmanager.getEventNameMapping().get(e.getActionCommand())).performEvent(
@@ -58,8 +58,22 @@ public class SidePanel extends JPanel{
 								);
 			}
 		});
+		
+		stapknop.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				eventmanager.parseEvent(
+						eventmanager.getEventNameMapping().get(e.getActionCommand())).performEvent(
+								modelmanager,e.getActionCommand()
+								);
+				
+			}
+		});
 		add(solveknop);
 		add(resetknop);
+		add(stapknop);
 		
 	}
 
