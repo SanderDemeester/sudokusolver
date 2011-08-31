@@ -8,21 +8,27 @@ import javax.swing.JFrame;
 import menubalk.MenuBalk;
 import modellen.ModelManager;
 import panelen.MainPaneel;
+import eventHandlers.EventManager;
 public class Main {
 	
+	private static ModelManager modelmanager;
+	private static EventManager eventmanager;
+	
 	public static void createGui(){
-		ModelManager modelmanager = new ModelManager();
 		
 		JFrame frame = new JFrame("sudoku solver");
 		frame.setDefaultLookAndFeelDecorated(true);
-		frame.setContentPane(new MainPaneel(modelmanager));
+		frame.setContentPane(new MainPaneel(modelmanager, eventmanager));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		frame.setPreferredSize(new Dimension(800, 500));
 		frame.pack();
-		frame.setJMenuBar(new MenuBalk(modelmanager));
+		frame.setJMenuBar(new MenuBalk(modelmanager,eventmanager));
 	}
 	public static void main(String[] args){
+		
+		modelmanager = new ModelManager();
+		eventmanager = new EventManager(modelmanager);
 		
 		EventQueue.invokeLater(new Runnable() {
 			

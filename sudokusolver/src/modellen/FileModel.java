@@ -3,15 +3,19 @@ package modellen;
 import java.awt.event.ActionEvent;
 import java.io.File;
 
+import eventHandlers.EventManager;
+
 
 public class FileModel extends Model{
 	
-	File sudokufile;
-	
+	private File sudokufile;
 	public FileModel(){
 		
 	}
 	
+	public void addFile(File sudokufile){
+		this.sudokufile = sudokufile;
+	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

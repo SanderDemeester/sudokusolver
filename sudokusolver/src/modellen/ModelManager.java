@@ -2,6 +2,8 @@ package modellen;
 
 import java.util.HashMap;
 
+import eventHandlers.EventManager;
+
 public class ModelManager {
 	
 	private HashMap<ModelEnum,Model> lijstmodellen = new HashMap<ModelEnum,Model>();
@@ -9,10 +11,10 @@ public class ModelManager {
 	
 	public ModelManager(){
 		lijstmodellen.put(ModelEnum.Null, new DummyModel());
-		lijstmodellen.put(ModelEnum.FileModel, new FileModel());
+		lijstmodellen.put(ModelEnum.openfile, new FileModel());
 		
 		
-		mapmodel.put("open-file", ModelEnum.FileModel); //model geimplementeerdt
+		mapmodel.put("openfile", ModelEnum.openfile); //model geimplementeerdt
 		mapmodel.put("solve", ModelEnum.Null); //model nog niet geimplementeerdt
 		mapmodel.put("credit", ModelEnum.Null); //model nog niet geiplementeert
 		mapmodel.put("reset", ModelEnum.Null); //model nog niet geimplementeert

@@ -2,26 +2,31 @@ package menubalk;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashMap;
 
-import modellen.ModelEnum;
 import modellen.ModelManager;
+import eventHandlers.EventManager;
 
 public class MenuBalkLuisteraar implements ActionListener{
 	
 	private ModelManager modelmanager;
+	private EventManager eventmanager;
 	
-	public MenuBalkLuisteraar(ModelManager modelmanager){
+	public MenuBalkLuisteraar(ModelManager modelmanager,
+								EventManager eventmanager){
 		this.modelmanager = modelmanager;
+		this.eventmanager = eventmanager;
 		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		//delegeer
-		modelmanager.getModel(modelmanager.getMapModel().get(e.getActionCommand())).actionPerformed(e);
-		
+		//delegeer model events adhv ModelEnum
+		System.out.println(e.getActionCommand());
+		eventmanager.parseEvent(
+				eventmanager.getEventNameMapping().get(e.getActionCommand())).performEvent(
+						modelmanager
+						);
 		
 	}
 

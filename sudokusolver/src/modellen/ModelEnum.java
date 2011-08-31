@@ -2,7 +2,7 @@ package modellen;
 
 public enum ModelEnum {
 	
-	FileModel,
+	openfile,
 	Solve,
 	credit,
 	Reset,

@@ -8,17 +8,19 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import modellen.ModelEnum;
 import modellen.ModelManager;
+import eventHandlers.EventManager;
 
 public class SidePanel extends JPanel{
 	
 	private ModelManager modelmanager;
+	private EventManager eventmanger;
 	
 	private JButton solveknop;
 	private JButton resetknop;
 	
-	public SidePanel(final ModelManager modelmanager){
+	public SidePanel(final ModelManager modelmanager,
+					 final EventManager eventmanager){
 		super();
 		
 		this.modelmanager = modelmanager;
