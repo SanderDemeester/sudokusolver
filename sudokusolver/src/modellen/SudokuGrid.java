@@ -25,7 +25,6 @@ public class SudokuGrid extends Model{
 					int len = Integer.parseInt(line);
 					first = false;
 					grid = new int[len][len];
-					System.out.println(len);
 				}else{
 					String[] treePairNumber = line.split(" ");
 					for(String pair : treePairNumber){
@@ -68,7 +67,7 @@ public class SudokuGrid extends Model{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("FileModel actionPerformed");
+		System.out.println("SudokuGrid actionPerformed"); //DEBUG
 	}
 	
 }
