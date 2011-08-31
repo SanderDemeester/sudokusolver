@@ -25,14 +25,18 @@ public class SudokuGrid extends Model{
 					int len = Integer.parseInt(line);
 					first = false;
 					grid = new int[len][len];
-				}
-				
-				int i = Integer.parseInt(line.substring(0,1));
-				int j = Integer.parseInt(line.substring(1,2));
-				int val = Integer.parseInt(line.substring(2,3));
+					System.out.println(len);
+				}else{
+					String[] treePairNumber = line.split(" ");
+					for(String pair : treePairNumber){
+				int i = Integer.parseInt(pair.substring(0,1));
+				int j = Integer.parseInt(pair.substring(1,2));
+				int val = Integer.parseInt(pair.substring(2,3));
 				grid[i][j] = val;
+					}
+				}
 			}
-		}catch(IOException ex){
+		}catch(Exception ex){
 			System.out.println("Fout gebeurdt tijdens het verwerken van de sudokufile");
 			ex.printStackTrace();
 		}
@@ -44,17 +48,15 @@ public class SudokuGrid extends Model{
 	
 	private void toonGrid(){
 		for(int i = 0; i < 9; i++){
-			if(i % 3 == 0 ){
-				System.out.println("------------------");
-			}
+			if(i % 3 == 0)
+				System.out.println("-------------------------");
 			for(int j = 0; j < 9; j++){
-				if(j % 3 == 0){
-					System.out.println("|");
-				}
-				System.out.println(grid[i][j] == 0 ? " " : Integer.toString(grid[i][j]));
-				System.out.println(" ");
+				if(j % 3 == 0)
+					System.out.print("| ");
+				System.out.print(grid[i][j] == 0 ? " " : Integer.toString(grid[i][j]));
+				System.out.print(" ");
 			}
-			System.out.println(' ');
+			System.out.println("| ");
 		}
 		System.out.println("-------------------------");
 			}

@@ -22,7 +22,7 @@ public class SidePanel extends JPanel{
 					 final EventManager eventmanager){
 		super();
 		
-		setBackground(Color.red);
+		setBackground(Color.gray);
 		setPreferredSize(new Dimension(200, 800));
 		
 		solveknop = new JButton("Solve");
