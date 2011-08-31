@@ -6,10 +6,10 @@ import java.io.File;
 import eventHandlers.EventManager;
 
 
-public class FileModel extends Model{
+public class SudokuGrid extends Model{
 	
 	private File sudokufile;
-	public FileModel(){
+	public SudokuGrid(){
 		
 	}
 	

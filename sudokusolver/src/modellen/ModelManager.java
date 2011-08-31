@@ -11,13 +11,13 @@ public class ModelManager {
 	
 	public ModelManager(){
 		lijstmodellen.put(ModelEnum.dummy, new DummyModel());
-		lijstmodellen.put(ModelEnum.openfile, new FileModel());
+		lijstmodellen.put(ModelEnum.sudokugrid, new SudokuGrid());
 		
 		
-		mapmodel.put("openfile", ModelEnum.openfile); //model geimplementeerdt
-		mapmodel.put("solve", ModelEnum.dummy); //model nog niet geimplementeerdt
-		mapmodel.put("credit", ModelEnum.dummy); //model nog niet geiplementeert
-		mapmodel.put("reset", ModelEnum.dummy); //model nog niet geimplementeert
+		mapmodel.put("openfile", ModelEnum.sudokugrid); //model geimplementeerdt
+		mapmodel.put("solve", ModelEnum.solve); //model geimplementeerdt
+		mapmodel.put("credit", ModelEnum.dummy); //model geimplementeerdt
+		mapmodel.put("reset", ModelEnum.reset); //model geimplementeertdt
 		
 	}
 	

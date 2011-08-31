@@ -4,7 +4,7 @@ import java.io.File;
 
 import javax.swing.JFileChooser;
 
-import modellen.FileModel;
+import modellen.SudokuGrid;
 import modellen.ModelManager;
 import eventHandlers.EventHandler;
 
@@ -22,7 +22,7 @@ public class LoadFile implements EventHandler{
 		filekiezer.showOpenDialog(null);
 		file = filekiezer.getSelectedFile();
 		
-		FileModel filemodel = (FileModel) modelmanager.getModel(modelmanager.getMapModel().get(actionCommand));
+		SudokuGrid filemodel = (SudokuGrid) modelmanager.getModel(modelmanager.getMapModel().get(actionCommand));
 		filemodel.addFile(file);
 		
 	}
