@@ -41,6 +41,7 @@ public class MainPaneel extends JPanel implements ChangeListener{
 	}
 	
 	public void paint(Graphics g){
+		super.paint(g); //altijd eerst super oproepen.
 		Graphics2D g2 = (Graphics2D)g;
 		 int x, y;
 	        y = 10;
