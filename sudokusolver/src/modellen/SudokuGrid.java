@@ -64,6 +64,10 @@ public class SudokuGrid extends Model{
 		parsefile();
 		firestateChaned();
 	}
+	
+	public boolean fileloaded(){
+		return sudokufile == null;
+	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
