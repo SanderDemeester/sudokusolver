@@ -45,16 +45,16 @@ public class MainPaneel extends JPanel implements ChangeListener{
 		Graphics2D g2 = (Graphics2D)g;
 		 int x, y;
 	        y = 50;
-	        while (y <= 250)
+	        while (y <= 450)
 	        {
-	            g2.drawLine(50, y, 250, y);
-	            y = y + 25;
+	            g2.drawLine(50, y, 410, y);
+	            y = y + 40;
 	        }
 	        x = 50;
-	        while (x <= 250)
+	        while (x <= 420)
 	        {
-	            g2.drawLine(x, 50, x, 250);
-	            x = x + 25;
+	            g2.drawLine(x, 50, x, 410);
+	            x = x + 40;
 	        }
 
 
