@@ -12,7 +12,6 @@ public class Reset implements EventHandler{
 	@Override
 	public void performEvent(ModelManager modelmanager, String actieCommand) {
 		// TODO Auto-generated method stub
-		System.out.println("Rest");
 		this.modelmanager = modelmanager;
 		SudokuGrid filemodel = (SudokuGrid) modelmanager.getModel(ModelEnum.sudokugrid);
 		filemodel.reset();
