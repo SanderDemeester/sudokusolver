@@ -49,6 +49,12 @@ public class SudokuGrid extends Model{
 		firestateChaned();
 	}
 	
+	public void reset(){
+		grid = new int[len][len];
+		sudokufile = null;
+		firestateChaned();
+	}
+	
 	private boolean solve(int i, int j, int[][] matrix){
 		if(i == len){
 			i = 0;
