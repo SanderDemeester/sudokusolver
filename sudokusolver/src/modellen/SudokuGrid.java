@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+import javax.swing.JOptionPane;
+
 
 public class SudokuGrid extends Model{
 	
@@ -44,8 +46,12 @@ public class SudokuGrid extends Model{
 	}
 	
 	public void solve(){
-		solve(0, 0, grid);
-		toonGridCLI();
+		if(solve(0,0,grid))
+			toonGridCLI();	
+		else
+			JOptionPane.showMessageDialog(null,
+				    "Geen oplossingen gevonden",
+				    null, JOptionPane.ERROR_MESSAGE);
 		firestateChaned();
 	}
 	

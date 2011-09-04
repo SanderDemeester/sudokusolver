@@ -14,9 +14,10 @@ public class ModelManager {
 		lijstmodellen.put(ModelEnum.sudokugrid, new SudokuGrid());
 		
 		
+		
 		mapmodel.put("openfile", ModelEnum.sudokugrid); //model geimplementeerdt
 		mapmodel.put("solve", ModelEnum.solve); //model geimplementeerdt
-		mapmodel.put("credit", ModelEnum.dummy); //model geimplementeerdt
+		mapmodel.put("credit", ModelEnum.credit); //model geimplementeerdt
 		mapmodel.put("reset", ModelEnum.reset); //model geimplementeertdt
 		
 	}
