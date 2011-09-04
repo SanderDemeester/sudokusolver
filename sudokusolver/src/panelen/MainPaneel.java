@@ -44,10 +44,16 @@ public class MainPaneel extends JPanel implements ChangeListener{
 	}
 	
 	public void paint(Graphics g){
+		
+		/**60 is de start pos op x-as voor het eerste symbool
+		 * 80 is de start pos op de y-as voor het eerste symbool */
 		super.paint(g); //altijd eerst super oproepen.
 		Graphics2D g2 = (Graphics2D)g; //een Graphics2D om gewone lijnen mee te tekennen.
-		
-		 int x, y;
+		int marge = 40; /*dit het aantal dat moet worden verplaats op de x of de y as om het volgende 
+		symbool te kunnen/mogen tekennen.*/
+		int tekenposX = 60;
+		int tekenposY = 80;
+		int x, y;
 		 y = 50;
 		 while (y <= 450)
 		 {
@@ -61,7 +67,14 @@ public class MainPaneel extends JPanel implements ChangeListener{
 	            x = x + 40;
 	        }
 	        g2.setFont(Font1);
-	        g2.drawString("6", 60, 80);
+	        for(int i = 0; i < 9; ++i){
+	        	for(int j = 0; j < 9; ++j){
+	        		g2.drawString("6", tekenposX, tekenposY);
+	        		tekenposX += marge;
+	        	}
+	        	tekenposY += marge;
+	        	tekenposX = 60;
+	        }
 	}
 
 }
