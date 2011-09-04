@@ -43,8 +43,6 @@ public class MainPaneel extends JPanel implements ChangeListener{
 	@Override
 	public void stateChanged(ChangeEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("StateChanged in MainPaneel");
-		add(label);
 		repaint();
 	}
 	
