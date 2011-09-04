@@ -19,6 +19,7 @@ public class MainPaneel extends JPanel implements ChangeListener{
 	
 	private ModelManager modelmanager;
 	private EventManager eventmanager;
+	private SudokuGrid gridmodel;
 	
 	private Font Font1 = new Font("Long Island",Font.BOLD,30);
 	
@@ -29,6 +30,8 @@ public class MainPaneel extends JPanel implements ChangeListener{
 		super();
 		this.modelmanager = modelmanager;
 		this.eventmanager = eventmanager;
+		gridmodel = (SudokuGrid)modelmanager.getModel(ModelEnum.sudokugrid);
+		
 		modelmanager.getModel(modelmanager.getMapModel().get("openfile")).addChangeListerner(this);
 		setLayout(new BorderLayout());
 		add(new SidePanel(modelmanager,eventmanager), BorderLayout.EAST);
@@ -64,9 +67,8 @@ public class MainPaneel extends JPanel implements ChangeListener{
 	            g2.drawLine(x, 50, x, 410);
 	            x = x + 40;
 	        }
-	        SudokuGrid filemodel = (SudokuGrid) modelmanager.getModel(modelmanager.getMapModel().get(ModelEnum.sudokugrid));
-	        System.out.println(filemodel);
-	        paintSymbolGrid(g2);
+	        if(!gridmodel.fileloaded())
+	        	paintSymbolGrid(g2);	
 	        
 	       
 	}
