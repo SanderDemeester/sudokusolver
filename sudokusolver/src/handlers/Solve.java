@@ -1,6 +1,8 @@
 package handlers;
 
+import modellen.ModelEnum;
 import modellen.ModelManager;
+import modellen.SudokuGrid;
 import eventHandlers.EventHandler;
 import eventHandlers.EventManager;
 
@@ -14,9 +16,8 @@ public class Solve implements EventHandler{
 	public void performEvent(ModelManager modelmanager, String actieCommand) {
 		// TODO Auto-generated method stub
 		this.modelmanager = modelmanager;
-		this.eventmanager = eventmanager;
-		System.out.println("Solve");
-		
+		SudokuGrid filemodel = (SudokuGrid) modelmanager.getModel(ModelEnum.sudokugrid);
+		filemodel.solve();
 	}
 
 }
