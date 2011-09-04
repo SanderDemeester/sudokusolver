@@ -46,6 +46,7 @@ public class SudokuGrid extends Model{
 	public void solve(){
 		solve(0, 0, grid);
 		toonGridCLI();
+		firestateChaned();
 	}
 	
 	private boolean solve(int i, int j, int[][] matrix){
