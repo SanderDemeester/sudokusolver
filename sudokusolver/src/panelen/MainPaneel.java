@@ -67,6 +67,7 @@ public class MainPaneel extends JPanel implements ChangeListener{
 	            g2.drawLine(x, 50, x, 410);
 	            x = x + 40;
 	        }
+	        
 	        if(!gridmodel.fileloaded())
 	        	paintSymbolGrid(g2);	
 	        
@@ -81,11 +82,16 @@ public class MainPaneel extends JPanel implements ChangeListener{
 		int tekenposX = 60;
 		int tekenposY = 80;
 		
+		int grid[][] = gridmodel.getGrid();
+		String temp;
+		
 		g2.setFont(Font1);
 		
 		 for(int i = 0; i < 9; ++i){
 	        	for(int j = 0; j < 9; ++j){
-	        		g2.drawString("0", tekenposX, tekenposY);
+	        		if(grid[i][j] != 0){
+	        			g2.drawString(((Integer)grid[i][j]).toString(), tekenposX, tekenposY);
+	        		}
 	        		tekenposX += marge;
 	        	}
 	        	tekenposY += marge;
