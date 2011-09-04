@@ -64,7 +64,8 @@ public class MainPaneel extends JPanel implements ChangeListener{
 	            g2.drawLine(x, 50, x, 410);
 	            x = x + 40;
 	        }
-	        
+	        SudokuGrid filemodel = (SudokuGrid) modelmanager.getModel(modelmanager.getMapModel().get(ModelEnum.sudokugrid));
+	        System.out.println(filemodel);
 	        paintSymbolGrid(g2);
 	        
 	       
@@ -82,7 +83,7 @@ public class MainPaneel extends JPanel implements ChangeListener{
 		
 		 for(int i = 0; i < 9; ++i){
 	        	for(int j = 0; j < 9; ++j){
-	        		g2.drawString("6", tekenposX, tekenposY);
+	        		g2.drawString("0", tekenposX, tekenposY);
 	        		tekenposX += marge;
 	        	}
 	        	tekenposY += marge;
