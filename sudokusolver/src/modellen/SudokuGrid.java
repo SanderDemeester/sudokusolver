@@ -16,6 +16,7 @@ public class SudokuGrid extends Model{
 	private int len;
 	public SudokuGrid(){
 		
+		
 	}
 	
 	private void parsefile(){
@@ -46,6 +47,8 @@ public class SudokuGrid extends Model{
 	}
 	
 	public void solve(){
+		//kijk of er een file is ingeladen
+		if(!(sudokufile == null)){
 		if(!solve(0,0,grid)){
 			//toonGridCLI();	
 			JOptionPane.showMessageDialog(null,
@@ -53,6 +56,7 @@ public class SudokuGrid extends Model{
 				    null, JOptionPane.ERROR_MESSAGE);
 		}
 		firestateChaned();
+		}
 	}
 	
 	public void reset(){
