@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -71,9 +72,29 @@ public class SidePanel extends JPanel{
 				
 			}
 		});
-		add(solveknop);
-		add(resetknop);
-		add(stapknop);
+		
+		GroupLayout layout = new GroupLayout(this);
+		setLayout(layout);
+		layout.setAutoCreateGaps(true);
+		layout.setAutoCreateGaps(true);
+		
+		layout.setVerticalGroup(
+				layout.createParallelGroup()
+					.addGroup(layout.createSequentialGroup()
+							.addComponent(solveknop)
+							.addComponent(resetknop)
+							.addComponent(stapknop)
+							)
+							);
+		layout.setHorizontalGroup(
+				layout.createSequentialGroup()
+					.addGroup(layout.createParallelGroup()
+							.addComponent(solveknop)
+							.addComponent(resetknop)
+							.addComponent(stapknop)
+							)
+							);
+		
 		
 	}
 

@@ -42,16 +42,16 @@ public class SudokuGrid extends Model{
 			System.out.println("Fout gebeurdt tijdens het verwerken van de sudokufile");
 			ex.printStackTrace();
 		}
-		toonGridCLI();
+		//toonGridCLI();
 	}
 	
 	public void solve(){
-		if(solve(0,0,grid))
-			toonGridCLI();	
-		else
+		if(!solve(0,0,grid)){
+			//toonGridCLI();	
 			JOptionPane.showMessageDialog(null,
 				    "Geen oplossingen gevonden",
 				    null, JOptionPane.ERROR_MESSAGE);
+		}
 		firestateChaned();
 	}
 	
