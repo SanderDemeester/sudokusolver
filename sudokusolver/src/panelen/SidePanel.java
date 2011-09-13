@@ -78,20 +78,22 @@ public class SidePanel extends JPanel{
 		layout.setAutoCreateGaps(true);
 		layout.setAutoCreateGaps(true);
 		
+		
 		layout.setVerticalGroup(
-				layout.createParallelGroup()
+				layout.createParallelGroup(GroupLayout.Alignment.CENTER)
 					.addGroup(layout.createSequentialGroup()
-							.addComponent(solveknop)
-							.addComponent(resetknop)
-							.addComponent(stapknop)
+							.addComponent(solveknop,25,25,25)
+							.addComponent(resetknop,25,25,25)
+							.addComponent(stapknop,25,25,25)
 							)
 							);
 		layout.setHorizontalGroup(
 				layout.createSequentialGroup()
-					.addGroup(layout.createParallelGroup()
-							.addComponent(solveknop)
-							.addComponent(resetknop)
-							.addComponent(stapknop)
+				.addGap(50)
+					.addGroup(layout.createParallelGroup(GroupLayout.Alignment.CENTER)
+							.addComponent(solveknop,95,95,95)
+							.addComponent(resetknop,95,95,95)
+							.addComponent(stapknop,95,95,95)
 							)
 							);
 		
