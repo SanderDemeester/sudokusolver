@@ -6,6 +6,7 @@ public enum EventEnum {
 	reset, //rest het veld
 	solve, //los gewoon op
 	stap, //los de sudoku op met tijs intervallen
+	credit, //eren wie eer toekomt
 	dummy;
 
 }

@@ -1,5 +1,6 @@
 package eventHandlers;
 
+import handlers.CreditHandler;
 import handlers.DummyHandler;
 import handlers.LoadFile;
 import handlers.Reset;
@@ -24,6 +25,7 @@ public class EventManager {
 		eventmap.put(EventEnum.solve, new Solve());
 		eventmap.put(EventEnum.reset, new Reset());
 		eventmap.put(EventEnum.stap, new StapSolve());
+		eventmap.put(EventEnum.credit, new CreditHandler());
 		eventmap.put(EventEnum.dummy,new DummyHandler());
 		
 		eventNameMapping.put("openfile", EventEnum.openfile);
@@ -31,6 +33,7 @@ public class EventManager {
 		eventNameMapping.put("reset", EventEnum.reset);
 		eventNameMapping.put("solve", EventEnum.solve);
 		eventNameMapping.put("stap", EventEnum.stap);
+		eventNameMapping.put("credit",EventEnum.credit);
 	}
 	
 	public EventHandler parseEvent(EventEnum eventenum){
