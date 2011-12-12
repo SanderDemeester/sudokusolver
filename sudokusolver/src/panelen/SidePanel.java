@@ -18,6 +18,8 @@ public class SidePanel extends JPanel{
 	private JButton solveknop;
 	private JButton resetknop;
 	private JButton stapknop;
+	private JButton inputwindowknop;
+		
 	
 	public SidePanel(final ModelManager modelmanager,
 					 final EventManager eventmanager){
@@ -29,9 +31,12 @@ public class SidePanel extends JPanel{
 		solveknop = new JButton("Solve");
 		resetknop = new JButton("Reset");
 		stapknop = new JButton("Stap");
+		inputwindowknop = new JButton("Input window");
+		
 		solveknop.setActionCommand("solve");
 		resetknop.setActionCommand("reset");
 		stapknop.setActionCommand("stap");
+		inputwindowknop.setActionCommand("inputwindow");
 		
 		resetknop.addActionListener(new ActionListener() {
 			
