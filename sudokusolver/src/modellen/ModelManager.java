@@ -6,6 +6,9 @@ import eventHandlers.EventManager;
 
 public class ModelManager {
 	
+	
+	private GUIManager guimanager;
+	
 	private HashMap<ModelEnum,Model> lijstmodellen = new HashMap<ModelEnum,Model>();
 	private HashMap<String,ModelEnum> mapmodel = new HashMap<String,ModelEnum>();
 	
@@ -24,6 +27,12 @@ public class ModelManager {
 	
 	public void addModel(Model model, ModelEnum modelenum){
 		lijstmodellen.put(modelenum, model);
+	}
+	public void addGUiManager(GUIManager guimanager){
+		this.guimanager = guimanager;
+	}
+	public GUIManager getGUIManager(){ 
+		return guimanager;
 	}
 	
 	public Model getModel(ModelEnum modelenum){
