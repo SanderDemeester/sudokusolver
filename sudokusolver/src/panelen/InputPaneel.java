@@ -1,6 +1,7 @@
 package panelen;
 
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 
 import javax.swing.GroupLayout;
@@ -26,12 +27,12 @@ public class InputPaneel extends JPanel{
 		visual_matrix[1][1] = new JTextField(1);
 		
 		for(int i = 0; i < 9; i++){
-			visual_matrix[1][i] = new JTextField(5);
-			visual_matrix[1][i].setSize(5, 5);
-			add(visual_matrix[1][i]);	
-		}
-		
-		
+			for(int j = 0; j < 9; j++){
+			visual_matrix[i][j] = new JTextField(5);
+			visual_matrix[i][j].setFont(new Font("Verdana",Font.BOLD,45));
+			visual_matrix[i][j].setSize(5, 5);
+			add(visual_matrix[i][j]);	
+			}
+		}	
 	}
-
 }
