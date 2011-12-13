@@ -22,6 +22,7 @@ public class InputWindow implements EventHandler{
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setVisible(true);
 		frame.setContentPane(new InputPaneel(modelmanager));
+		frame.setResizable(false);
 		frame.pack();
 		
 	}
