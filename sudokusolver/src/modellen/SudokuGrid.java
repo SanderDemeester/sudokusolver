@@ -130,12 +130,16 @@ public class SudokuGrid extends Model{
 		firestateChaned();
 	}
 	
-	public boolean fileloaded(){
-		return gridInit;
+	public boolean gridloaded(){
+		//return sudokufile == null;
+		return !gridInit;
 	}
 	public void setGrid(int[][] matrix){
 		grid = matrix;
+		System.out.println("ready? fire!!!!");
 		gridInit = true;
+		sudokufile = new File("/etc/passwd");
+		len = 9;
 		firestateChaned();
 	}
 	@Override

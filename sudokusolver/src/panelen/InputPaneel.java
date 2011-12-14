@@ -1,5 +1,6 @@
 package panelen;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -35,6 +36,8 @@ public class InputPaneel extends JPanel implements WindowListener{
 			for(int j = 0; j < 9; j++){
 			visual_matrix[i][j] = new JTextField(5);
 			visual_matrix[i][j].setFont(new Font("Verdana",Font.BOLD,45));
+			if(i == 3 && j == 3)
+				visual_matrix[i][j].setBackground(Color.gray);
 			visual_matrix[i][j].setSize(5, 5);
 			add(visual_matrix[i][j]);	
 			}
@@ -58,7 +61,6 @@ public class InputPaneel extends JPanel implements WindowListener{
 					matrix[i][j] = Integer.parseInt(visual_matrix[i][j].getText().toString());
 					System.out.println(Integer.parseInt(visual_matrix[i][j].getText().toString()));
 				}
-				
 			}
 			
 			}

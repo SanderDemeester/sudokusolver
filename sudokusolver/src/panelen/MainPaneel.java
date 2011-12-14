@@ -66,7 +66,7 @@ public class MainPaneel extends JPanel implements ChangeListener{
 	            x = x + 40;
 	        }
 	        
-	        if(!gridmodel.fileloaded())
+	        if(!gridmodel.gridloaded())
 	        	paintSymbolGrid(g2);	
 	        
 	       
