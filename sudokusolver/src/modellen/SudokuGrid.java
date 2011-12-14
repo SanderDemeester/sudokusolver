@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 
 public class SudokuGrid extends Model{
@@ -130,10 +131,11 @@ public class SudokuGrid extends Model{
 	public boolean fileloaded(){
 		return sudokufile == null;
 	}
+	public void setGrid(int[][] visual_matrix){
+	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		System.out.println("SudokuGrid actionPerformed"); //DEBUG
 	}
-	
 }
