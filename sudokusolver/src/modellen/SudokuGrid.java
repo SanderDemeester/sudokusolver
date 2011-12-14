@@ -15,6 +15,7 @@ public class SudokuGrid extends Model{
 	private File sudokufile;
 	private int[][] grid;
 	private int len;
+	private boolean gridInit = false;
 	public SudokuGrid(){
 		
 		
@@ -45,6 +46,7 @@ public class SudokuGrid extends Model{
 			ex.printStackTrace();
 		}
 		//toonGridCLI();
+		gridInit = true;
 	}
 	
 	public void solve(){
@@ -129,9 +131,12 @@ public class SudokuGrid extends Model{
 	}
 	
 	public boolean fileloaded(){
-		return sudokufile == null;
+		return gridInit;
 	}
-	public void setGrid(int[][] visual_matrix){
+	public void setGrid(int[][] matrix){
+		grid = matrix;
+		gridInit = true;
+		firestateChaned();
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {

@@ -50,23 +50,27 @@ public class InputPaneel extends JPanel implements WindowListener{
 	@Override
 	public void windowClosed(WindowEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("test test");
+		int[][] matrix = new int[9][9];
+			
+		for(int i = 0; i < 9; i++){
+			for(int j = 0; j < 9; j++){
+				if(!visual_matrix[i][j].getText().isEmpty()){
+					matrix[i][j] = Integer.parseInt(visual_matrix[i][j].getText().toString());
+					System.out.println(Integer.parseInt(visual_matrix[i][j].getText().toString()));
+				}
+				
+			}
+			
+			}
+		
+		((SudokuGrid)modelmanager.getModel(ModelEnum.sudokugrid)).setGrid(matrix);
 		
 	}
 
 	@Override
 	public void windowClosing(WindowEvent e) {
 		// TODO Auto-generated method stub
-		int[][] matrix = new int[9][9];
 		
-		for(int i = 0; i < 9; i++){
-			for(int j = 0; j < 9; j++){
-				matrix[i][j] = visual_matrix[i][j].toString();
-			}
-			
-			}
-		
-		((SudokuGrid)modelmanager.getModel(ModelEnum.sudokugrid)).setGrid(matrix);
 	}
 
 	@Override
