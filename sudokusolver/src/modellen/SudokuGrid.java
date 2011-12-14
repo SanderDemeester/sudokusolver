@@ -106,6 +106,7 @@ public class SudokuGrid extends Model{
 					return false;
 		return true;
 	}
+	
 	public int[][] getGrid(){
 		return grid;
 	}
@@ -136,15 +137,13 @@ public class SudokuGrid extends Model{
 	}
 	public void setGrid(int[][] matrix){
 		grid = matrix;
-		System.out.println("ready? fire!!!!");
 		gridInit = true;
-		sudokufile = new File("/etc/passwd");
+		sudokufile = new File("");
 		len = 9;
 		firestateChaned();
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("SudokuGrid actionPerformed"); //DEBUG
 	}
 }
