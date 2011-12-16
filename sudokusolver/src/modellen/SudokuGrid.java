@@ -86,7 +86,6 @@ public class SudokuGrid extends Model{
 		}
 		matrix[i][j] = 0; //reset voor backtracking
 		return false;
-		
 	}
 	
 	private boolean legal(int i, int j, int val, int[][] matrix){
