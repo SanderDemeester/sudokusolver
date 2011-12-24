@@ -6,6 +6,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 
 import menubalk.MenuBalk;
+import modellen.GUIManager;
 import modellen.ModelManager;
 import panelen.MainPaneel;
 import eventHandlers.EventManager;
@@ -16,7 +17,13 @@ public class Main {
 	
 	public static void createGui(){
 		
+		
+		GUIManager guimanager = new GUIManager();
+		
 		JFrame frame = new JFrame("sudoku solver");
+		
+		guimanager.setJFrame(frame);
+		
 		frame.setDefaultLookAndFeelDecorated(true);
 		frame.setContentPane(new MainPaneel(modelmanager, eventmanager));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

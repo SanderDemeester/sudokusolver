@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 
 public class SudokuGrid extends Model{
@@ -14,6 +15,7 @@ public class SudokuGrid extends Model{
 	private File sudokufile;
 	private int[][] grid;
 	private int len;
+	private boolean gridInit = false;
 	public SudokuGrid(){
 		
 		
@@ -44,6 +46,7 @@ public class SudokuGrid extends Model{
 			ex.printStackTrace();
 		}
 		//toonGridCLI();
+		gridInit = true;
 	}
 	
 	public void solve(){
@@ -83,7 +86,6 @@ public class SudokuGrid extends Model{
 		}
 		matrix[i][j] = 0; //reset voor backtracking
 		return false;
-		
 	}
 	
 	private boolean legal(int i, int j, int val, int[][] matrix){
@@ -103,6 +105,7 @@ public class SudokuGrid extends Model{
 					return false;
 		return true;
 	}
+	
 	public int[][] getGrid(){
 		return grid;
 	}
@@ -127,13 +130,19 @@ public class SudokuGrid extends Model{
 		firestateChaned();
 	}
 	
-	public boolean fileloaded(){
-		return sudokufile == null;
+	public boolean gridloaded(){
+		//return sudokufile == null;
+		return !gridInit;
+	}
+	public void setGrid(int[][] matrix){
+		grid = matrix;
+		gridInit = true;
+		sudokufile = new File("");
+		len = 9;
+		firestateChaned();
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("SudokuGrid actionPerformed"); //DEBUG
 	}
-	
 }

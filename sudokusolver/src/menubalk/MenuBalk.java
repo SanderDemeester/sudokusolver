@@ -10,11 +10,11 @@ import eventHandlers.EventManager;
 
 public class MenuBalk extends JMenuBar{
 	private JMenu menu = new JMenu("Bestand"); //algemene menuitem
-	private JMenuItem[] menuitem = new JMenuItem[3];
+	private JMenuItem[] menuitem = new JMenuItem[4];
 	
-	private final String[] ACTIECOMMAND = {"openfile","solve","credit"};
-	private final String[] OPSCHRIFT = {"Open sudokufile","los op","credit"};
-	private final String[] ACELERATOR = {"ctr-O","ctrl-S","ctr-c"};
+	private final String[] ACTIECOMMAND = {"openfile","solve","credit","inputwindow"};
+	private final String[] OPSCHRIFT = {"Open sudokufile","los op","credit","Input Window"};
+	private final String[] ACELERATOR = {"ctr-O","ctrl-S","ctr-c","ctr-i"};
 	
 	private ModelManager modelmanager;
 	private EventManager eventmanager;
